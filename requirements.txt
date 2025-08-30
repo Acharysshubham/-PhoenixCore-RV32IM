@@ -1,0 +1,7 @@
+# Toolchain Requirements for PhoenixCore RV32IM
+
+# Synthesis and Simulation
+- Xilinx Vivado 2020.1 or newer
+
+# Hardware (Optional, for implementation)
+- Any Xilinx 7-series FPGA or newer (e.g., Zynq-7000)
