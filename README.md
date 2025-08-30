@@ -9,7 +9,7 @@ The primary goal was to create a robust and feature-rich soft-core processor tha
 
 ---
 
-## 🏛️ Final Architecture & Key Features
+##  Final Architecture & Key Features
 
 * **5-Stage Pipelined Architecture:** The core uses a classic 5-stage (IF, ID, EX, MEM, WB) pipeline to maximize instruction throughput.
 * **Complete Hazard Management:**
@@ -27,7 +27,7 @@ The primary goal was to create a robust and feature-rich soft-core processor tha
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1.  **Setup:**
     * Create a new project in Xilinx Vivado.
