@@ -1,0 +1,12 @@
+// Test Program for 5-Stage Pipeline
+// 1. Basic operations
+00100113 // addi x2, x0, 1   (x2 = 1)
+00200193 // addi x3, x0, 2   (x3 = 2)
+// 2. Test Forwarding (EX -> EX)
+03310233 // add  x4, x2, x3   (x4 = 3, depends on x2, x3 from above)
+// 3. Test Load-Use Stall
+00000293 // addi x5, x0, 0   (x5 = address 0)
+0002a303 // lw   x6, 0(x5)    (x6 = value at mem[0])
+00130393 // addi x7, x6, 1   (x7 depends on x6, MUST STALL)
+// 4. Test Forwarding (MEM -> EX)
+03430433 // add  x8, x6, x4   (x8 depends on x6 from lw, should be forwarded from MEM stage)
